@@ -3,7 +3,7 @@ import LinkDropdown from './LinkDropdown';
 import DarkMode from './DarkMode';
 import CartButton from './CartButton';
 import NavSearch from './NavSearch';
-import Container from '../global/container';
+import Container from '../global/Container';
 
 function Navbar() {
   return (
