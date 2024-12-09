@@ -1,6 +1,5 @@
 import { LuUser2 } from 'react-icons/lu';
 import { currentUser } from '@clerk/nextjs/server';
-import { use } from 'react';
 
 async function UserIcon() {
   const user = await currentUser();
