@@ -1,4 +1,16 @@
-function UserIcon() {
-  return <div>UserIcon</div>;
+import { LuUser2 } from 'react-icons/lu';
+import { currentUser } from '@clerk/nextjs/server';
+import { use } from 'react';
+
+async function UserIcon() {
+  const user = await currentUser();
+  const profileImage = user?.imageUrl;
+
+  if (profileImage) {
+    return (
+      <img src={profileImage} className='size-6 rounded-full object-cover' />
+    );
+  }
+  return <LuUser2 className='size-6 bg-primary rounded-full text-white' />;
 }
 export default UserIcon;
