@@ -7,9 +7,8 @@ import Link from 'next/link';
 function SignOutLink() {
   const { toast } = useToast();
   const handleLogout = () => {
-    toast({ description: 'Logging Successful' });
+    toast({ description: 'Loggingout Successful...' });
   };
-
   return (
     <SignOutButton>
       <Link href='/' className='w-full text-left' onClick={handleLogout}>
